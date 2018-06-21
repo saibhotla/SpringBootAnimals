@@ -19,21 +19,14 @@ public class main {
 	private static void loadSpring() {
 		// Loads Context
 		try {
-			@SuppressWarnings("resource")
-			ApplicationContext context = new AnnotationConfigApplicationContext(Animal.class);
-			Dog labrador = context.getBean(Dog.class);
-			labrador.bark();	
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		
 	}
 		
-	private static void loadTheServletInitializer() {
-		
-		
-		
-	}
+
 
 	
 

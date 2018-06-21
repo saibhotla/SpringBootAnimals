@@ -20,7 +20,8 @@ public abstract class Animal {
 	
 	@Bean
 	Dog dog() {
-		return new Dog(this.movement("Running"),this.name("Jack"));
+		return new Dog(movement(""),name(""));
 	}
+
 
 }

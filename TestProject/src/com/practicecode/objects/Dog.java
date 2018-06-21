@@ -19,4 +19,20 @@ public class Dog extends Animal {
 		System.out.print("WOOF");
 		
 	}
+
+	public Movement getMovement() {
+		return movement;
+	}
+
+	public void setMovement(Movement movement) {
+		this.movement = movement;
+	}
+
+	public Name getName() {
+		return name;
+	}
+
+	public void setName(Name name) {
+		this.name = name;
+	}
 }
