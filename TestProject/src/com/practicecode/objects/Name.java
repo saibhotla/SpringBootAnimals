@@ -10,6 +10,11 @@ public class Name {
 	public Name(String name) {
 		this.name = name;
 	}
+	
+	@Autowired
+	public Name() {
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String toString() {

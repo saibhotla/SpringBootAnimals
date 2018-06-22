@@ -9,18 +9,18 @@ import org.springframework.context.annotation.Configuration;
 public abstract class Animal {
 
 	@Bean
-	Name name(String name) {
-		return new Name(name);
+	Name name() {
+		return new Name();
 	}
 
 	@Bean
-	Movement movement(String movement) {
-		return new Movement(movement);
+	Movement movement() {
+		return new Movement();
 	}
 	
 	@Bean
-	Dog dog() {
-		return new Dog(movement(""),name(""));
+	Dog dog(Movement move, Name name) {
+		return new Dog(movement(),name());
 	}
 
 

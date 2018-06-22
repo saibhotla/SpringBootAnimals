@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 
 import com.practicecode.objects.Animal;
 import com.practicecode.objects.Dog;
+import com.practicecode.objects.Movement;
+import com.practicecode.objects.Name;
 import com.practicecode.objects.Animal;
 
 @Configuration
@@ -24,14 +26,22 @@ public class FarmLoadingService {
 	public void loadDogs() {
 
 		//// Creating generic integer ArrayList
-		Dog labrador = null;
-		Dog germanShephard = null;
-		Dog chihuaha = null;
-		loadDogContext(labrador, germanShephard, chihuaha);
+		Dog labrador = new Dog(new Movement("sitting"), new Name("Jack"));
+		labrador.bark();
+		System.out.println();
+		
+		Dog germanShephard = new Dog(new Movement("sitting"), new Name("Bryan"));
+		germanShephard.bark();
+		System.out.println();
+		
+		
+		Dog chihuaha = new Dog(new Movement("sitting"), new Name("Peter"));
+		chihuaha.bark();
+		System.out.println();
 
 	}
 
-	public List<Animal> loadDogContext(Dog... dog) {
+	public void loadDogContext(Dog dog) {
 		List<Dog> dogs = new ArrayList<Dog>();
 		@SuppressWarnings("resource")
 		ApplicationContext context = new AnnotationConfigApplicationContext(Animal.class);
@@ -41,8 +51,6 @@ public class FarmLoadingService {
 
 			Animals.add(doggie);
 		}
-
-		return Animals;
 
 	}
 }
